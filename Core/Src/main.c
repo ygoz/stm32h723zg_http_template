@@ -347,9 +347,9 @@ void StartDefaultTask(void *argument)
   	LOCK_TCPIP_CORE();
     lwiperf_start_tcp_server_default(NULL, NULL);
 
-    ip4_addr_t remote_addr;
-    IP4_ADDR(&remote_addr, 192, 168, 1, 1);
-    lwiperf_start_tcp_client_default(&remote_addr, NULL, NULL);
+//    ip4_addr_t remote_addr;
+//    IP4_ADDR(&remote_addr, 192, 168, 1, 1);
+//    lwiperf_start_tcp_client_default(&remote_addr, NULL, NULL);
     UNLOCK_TCPIP_CORE();
     /* Infinite loop */
     osDelay(1000);
