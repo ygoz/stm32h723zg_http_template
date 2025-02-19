@@ -9,7 +9,7 @@
 #define INC_HTTP_CONNECT_HTTP_BODY_SEGMENTS_H_
 
 
-#define HTTP_BODY_BUFFER_SIZE 32768u  // Adjust based on expected body size
+#define HTTP_BODY_BUFFER_SIZE 65536u  // Adjust based on expected body size
 
 // Buffer to store incoming HTTP body data
 extern char http_body_buffer[HTTP_BODY_BUFFER_SIZE];
