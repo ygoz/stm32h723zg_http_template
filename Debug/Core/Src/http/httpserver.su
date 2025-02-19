@@ -1,0 +1,2 @@
+../Core/Src/http/httpserver.c:64:6:http_thread	40	static
+../Core/Src/http/httpserver.c:102:6:http_server_init	16	static
