@@ -37,6 +37,7 @@ int receive_http_body(struct netconn *conn, int content_length,struct netbuf *ne
 
     // Loops until we've received content_length bytes:
     while (netconn_recv(conn, &network_buffer) == ERR_OK) {
+        // @TODO - add better documentation + clean up comments
 //    	recv_err = netconn_recv(conn, &network_buffer);
 
         netbuf_data(network_buffer, (void**)&rx_buffer, &rx_buflen); //extracts the data buffer (buf) and its length (buflen) from inbuf
