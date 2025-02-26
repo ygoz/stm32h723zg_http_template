@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>STM32H723_Nucleo_ETH</name>
+	<name>mongoose_eth_template</name>
 	<comment></comment>
 	<projects>
 	</projects>

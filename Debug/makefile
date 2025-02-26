@@ -22,6 +22,7 @@ RM := rm -rf
 -include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
+-include Middlewares/Third_Party/Cesanta_Network\ Library/Mongoose/subdir.mk
 -include LWIP/Target/subdir.mk
 -include LWIP/App/subdir.mk
 -include Drivers/STM32H7xx_HAL_Driver/Src/subdir.mk
@@ -54,34 +55,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := STM32H723_Nucleo_ETH
+BUILD_ARTIFACT_NAME := mongoose_eth_template
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-STM32H723_Nucleo_ETH.elf \
+mongoose_eth_template.elf \
 
 MAP_FILES += \
-STM32H723_Nucleo_ETH.map \
+mongoose_eth_template.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-STM32H723_Nucleo_ETH.list \
+mongoose_eth_template.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: STM32H723_Nucleo_ETH.elf secondary-outputs
+main-build: mongoose_eth_template.elf secondary-outputs
 
 # Tool invocations
-STM32H723_Nucleo_ETH.elf STM32H723_Nucleo_ETH.map: $(OBJS) $(USER_OBJS) C:\projects\stm32\dev\og\git_cloned\from_git_dev\STM32H723_Nucleo_ETH\STM32H723ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32H723_Nucleo_ETH.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\projects\stm32\dev\og\git_cloned\from_git_dev\STM32H723_Nucleo_ETH\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H723_Nucleo_ETH.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+mongoose_eth_template.elf mongoose_eth_template.map: $(OBJS) $(USER_OBJS) C:\projects\stm32\dev\dev_template\stm32h723zg_http_template\STM32H723ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "mongoose_eth_template.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\projects\stm32\dev\dev_template\stm32h723zg_http_template\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mongoose_eth_template.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -90,14 +91,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32H723_Nucleo_ETH.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "STM32H723_Nucleo_ETH.list"
+mongoose_eth_template.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "mongoose_eth_template.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) STM32H723_Nucleo_ETH.elf STM32H723_Nucleo_ETH.list STM32H723_Nucleo_ETH.map default.size.stdout
+	-$(RM) default.size.stdout mongoose_eth_template.elf mongoose_eth_template.list mongoose_eth_template.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

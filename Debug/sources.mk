@@ -32,6 +32,7 @@ Drivers/BSP/Components/lan8742 \
 Drivers/STM32H7xx_HAL_Driver/Src \
 LWIP/App \
 LWIP/Target \
+Middlewares/Third_Party/Cesanta_Network\ Library/Mongoose \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 Middlewares/Third_Party/FreeRTOS/Source \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \

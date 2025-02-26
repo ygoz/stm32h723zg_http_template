@@ -43,6 +43,7 @@ void POST_requests_router(struct netconn *conn){
 
 //		char *content = (char *)calloc(content, sizeof(char));
 //		char *content = "this is message";
-		http_write_response(conn, HTTP_OK, "this is message");
+		http_write_response(conn, HTTP_OK, "this is message2");
+		printf("shmoopoo 3\r\n");
 	}
 }
