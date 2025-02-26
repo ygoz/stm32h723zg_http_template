@@ -26,6 +26,7 @@
 /* ETH_CODE: add lwiperf, see comment in StartDefaultTask function */
 #include "lwip/apps/lwiperf.h"
 #include "http/httpserver.h"
+#include "mongoose.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,6 +44,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+
+RNG_HandleTypeDef hrng;
 
 UART_HandleTypeDef huart3;
 
@@ -71,6 +74,7 @@ void SystemClock_Config(void);
 static void MPU_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART3_UART_Init(void);
+static void MX_RNG_Init(void);
 void StartDefaultTask(void *argument);
 
 /* USER CODE BEGIN PFP */
@@ -120,6 +124,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART3_UART_Init();
+  MX_RNG_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -195,9 +200,10 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 16;
@@ -230,6 +236,33 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief RNG Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RNG_Init(void)
+{
+
+  /* USER CODE BEGIN RNG_Init 0 */
+
+  /* USER CODE END RNG_Init 0 */
+
+  /* USER CODE BEGIN RNG_Init 1 */
+
+  /* USER CODE END RNG_Init 1 */
+  hrng.Instance = RNG;
+  hrng.Init.ClockErrorDetection = RNG_CED_ENABLE;
+  if (HAL_RNG_Init(&hrng) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RNG_Init 2 */
+
+  /* USER CODE END RNG_Init 2 */
+
 }
 
 /**
@@ -380,36 +413,53 @@ void StartDefaultTask(void *argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
-  /* ETH_CODE: Adding lwiperf to measure TCP/IP performance.
-     * iperf 2.0.6 (or older?) is required for the tests. Newer iperf2 versions
-     * might work without data check, but they send different headers.
-     * iperf3 is not compatible at all.
-     * Adding lwiperf.c file to the project is necessary.
-     * The default include path should already contain
-     * 'lwip/apps/lwiperf.h'
-     */
+
   	LOCK_TCPIP_CORE();
     lwiperf_start_tcp_server_default(NULL, NULL);
-
-//    ip4_addr_t remote_addr;
-//    IP4_ADDR(&remote_addr, 192, 168, 1, 1);
-//    lwiperf_start_tcp_client_default(&remote_addr, NULL, NULL);
     UNLOCK_TCPIP_CORE();
-    /* Infinite loop */
     osDelay(1000);
-    //  HAL_GPIO_WritePin(GPIOB, LED_RED_Pin, GPIO_PIN_SET);
-      HAL_GPIO_WritePin(GPIOE, LED_YELLOW_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOE, LED_YELLOW_Pin, GPIO_PIN_SET);
 
-//      HAL_UART_Transmit(&huart3, "hi\r\n", 4, 500);
-      printf("shmoopoo 2\r\n");
-      printf("hi 2\r\n");
-//      printf("poopoo ");
 
-      osSemaphoreRelease(startDefaultTaskSemaphore);
+    extern struct netif gnetif;
+    while (ip4_addr_isany_val(*netif_ip4_addr(&gnetif))) {
+      osDelay(200);
+    }
+    // Mongoose:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//    printf("READY, IP: %s\r\n", ip4addr_ntoa(netif_ip4_addr(&gnetif)));
+    MG_INFO(("READY yamson, IP: %s", ip4addr_ntoa(netif_ip4_addr(&gnetif))));
+    struct mg_mgr mgr;
+    mg_mgr_init(&mgr);
+    osSemaphoreRelease(startDefaultTaskSemaphore);
     for(;;)
     {
-      osDelay(1000);
+      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
+      mg_mgr_poll(&mgr, 500);
     }
+
+//    for(;;)
+//    {
+//      osDelay(1000);
+//    }
+//	struct mg_mgr mgr;
+//	mg_mgr_init(&mgr);
+//
+//	  // Define static IP configuration
+//	  struct mg_tcpip_if mif = {
+//	      .mac = {2, 0, 1, 2, 3, 4},  // Custom MAC address
+//	      .ip = mg_htonl(MG_U32(192, 168, 1, 10)),  // Static IP: 192.168.1.10
+//	      .mask = mg_htonl(MG_U32(255, 255, 255, 0)),  // Subnet mask: 255.255.255.0
+//	      .gw = mg_htonl(MG_U32(192, 168, 1, 1)),  // Gateway: 192.168.1.1
+//	      .driver = &mg_tcpip_driver_stm32h,  // Use STM32 Ethernet driver
+//	  };
+//
+//	  // Initialize TCP/IP stack with static IP
+//	  mg_tcpip_init(&mgr, &mif);
+//
+//	for (;;) mg_mgr_poll(&mgr, 100);
+
+
+
   /* USER CODE END 5 */
 }
 
