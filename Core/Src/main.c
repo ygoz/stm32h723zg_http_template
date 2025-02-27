@@ -83,7 +83,14 @@ void Starthttp(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+static void fn(struct mg_connection *c, int ev, void *ev_data) {
+  if (ev == MG_EV_HTTP_MSG) {
 
+	  struct mg_http_message *hm = (struct mg_http_message *) ev_data;
+	  printf("HTTP Body: %.*s\r\n", (int) hm->body.len, hm->body.ptr);
+	  mg_http_reply(c, 200, "", "ok\n");
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -387,11 +394,12 @@ static void MX_GPIO_Init(void)
 void Starthttp(void *argument)
 {
   /* USER CODE BEGIN Starthttp */
+
 	osSemaphoreAcquire(startDefaultTaskSemaphore, osWaitForever);
 	osDelay(1000);
 	HAL_GPIO_WritePin(GPIOB, LED_GREEN_Pin, GPIO_PIN_SET);
-	http_thread(argument);
-	HAL_GPIO_WritePin(GPIOB, LED_GREEN_Pin, GPIO_PIN_RESET);
+//	http_thread(argument);
+//	HAL_GPIO_WritePin(GPIOB, LED_GREEN_Pin, GPIO_PIN_RESET);
   /* Infinite loop */
   for(;;)
   {
@@ -430,10 +438,11 @@ void StartDefaultTask(void *argument)
     MG_INFO(("READY yamson, IP: %s", ip4addr_ntoa(netif_ip4_addr(&gnetif))));
     struct mg_mgr mgr;
     mg_mgr_init(&mgr);
+    mg_http_listen(&mgr, "http://0.0.0.0", fn, &mgr);
+
     osSemaphoreRelease(startDefaultTaskSemaphore);
     for(;;)
     {
-      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
       mg_mgr_poll(&mgr, 500);
     }
 
