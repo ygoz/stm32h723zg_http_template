@@ -63,8 +63,6 @@ Core/Src/http/routers/get_router.o: ../Core/Src/http/routers/get_router.c \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/def.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h \
  ../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h \
- ../Core/Inc/http/request_parser/extract_http_header_segment.h \
- ../Core/Inc/http/request_parser/request_type.h \
  ../Core/Inc/http/routers/get_router.h
 ../Middlewares/Third_Party/LwIP/src/include/lwip/api.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h:
@@ -131,6 +129,4 @@ Core/Src/http/routers/get_router.o: ../Core/Src/http/routers/get_router.c \
 ../Middlewares/Third_Party/LwIP/src/include/lwip/def.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h:
 ../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h:
-../Core/Inc/http/request_parser/extract_http_header_segment.h:
-../Core/Inc/http/request_parser/request_type.h:
 ../Core/Inc/http/routers/get_router.h:

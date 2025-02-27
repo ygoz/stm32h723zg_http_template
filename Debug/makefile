@@ -16,7 +16,6 @@ RM := rm -rf
 -include Middlewares/Third_Party/LwIP/src/core/ipv4/subdir.mk
 -include Middlewares/Third_Party/LwIP/src/core/subdir.mk
 -include Middlewares/Third_Party/LwIP/src/apps/mqtt/subdir.mk
--include Middlewares/Third_Party/LwIP/src/apps/http/subdir.mk
 -include Middlewares/Third_Party/LwIP/src/api/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
@@ -29,9 +28,6 @@ RM := rm -rf
 -include Drivers/BSP/Components/lan8742/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/http/routers/subdir.mk
--include Core/Src/http/response_manager/subdir.mk
--include Core/Src/http/request_parser/subdir.mk
--include Core/Src/http/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
 

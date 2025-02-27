@@ -82,13 +82,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../LWIP/Target/ethernetif.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/apps/lwiperf.h \
- ../Core/Inc/http/httpserver.h \
- ../Middlewares/Third_Party/LwIP/src/include/lwip/api.h \
- ../Middlewares/Third_Party/LwIP/src/include/lwip/netbuf.h \
  ../Middlewares/Third_Party/Cesanta_Network\ Library/Mongoose/mongoose.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/sockets.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/inet.h \
- ../Middlewares/Third_Party/LwIP/src/include/lwip/errno.h
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/errno.h \
+ ../Core/Inc/http/routers/main_router.h
 ../Core/Inc/main.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -173,10 +171,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../LWIP/Target/ethernetif.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/apps/lwiperf.h:
-../Core/Inc/http/httpserver.h:
-../Middlewares/Third_Party/LwIP/src/include/lwip/api.h:
-../Middlewares/Third_Party/LwIP/src/include/lwip/netbuf.h:
 ../Middlewares/Third_Party/Cesanta_Network\ Library/Mongoose/mongoose.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/sockets.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/inet.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/errno.h:
+../Core/Inc/http/routers/main_router.h:

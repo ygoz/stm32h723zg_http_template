@@ -10,9 +10,8 @@
 
 
 
-#include "http/request_parser/request_type.h"
-#include "lwip/api.h"
+#include "mongoose.h"
 
-void handle_request(struct netconn *conn, HttpRequestType request_type);
+void handle_http_request(struct mg_connection *c, void *ev_data);
 
 #endif /* INC_HTTP_MAIN_ROUTER_H_ */

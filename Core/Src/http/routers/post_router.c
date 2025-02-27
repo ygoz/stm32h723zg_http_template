@@ -8,11 +8,7 @@
 
 #include <string.h>
 #include "lwip/api.h" // For netconn functions
-#include "http/request_parser/extract_http_header_segment.h"
-#include "http/request_parser/connect_http_body_segments.h"
 #include "http/routers/post_router.h"
-#include "http/response_manager/http_write_response.h"
-#include "http/response_manager/header_manager.h"
 
 
 
@@ -30,7 +26,7 @@
 
 
 void POST_requests_router(struct netconn *conn){
-	if (strncmp(http_header_buffer, "POST /postTest", 14) == 0) {
+//	if (strncmp(http_header_buffer, "POST /postTest", 14) == 0) {
 
 //		char *http_header = create_http_header(HTTP_OK, 10);
 //
@@ -43,7 +39,7 @@ void POST_requests_router(struct netconn *conn){
 
 //		char *content = (char *)calloc(content, sizeof(char));
 //		char *content = "this is message";
-		http_write_response(conn, HTTP_OK, "this is message2");
+//		http_write_response(conn, HTTP_OK, "this is message2");
 		printf("shmoopoo 3\r\n");
-	}
+//	}
 }

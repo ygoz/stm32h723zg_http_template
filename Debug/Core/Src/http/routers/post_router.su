@@ -1,1 +1,1 @@
-../Core/Src/http/routers/post_router.c:32:6:POST_requests_router	8	static
+../Core/Src/http/routers/post_router.c:28:6:POST_requests_router	0	static

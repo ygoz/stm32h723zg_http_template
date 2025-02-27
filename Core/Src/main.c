@@ -25,8 +25,10 @@
 /* USER CODE BEGIN Includes */
 /* ETH_CODE: add lwiperf, see comment in StartDefaultTask function */
 #include "lwip/apps/lwiperf.h"
-#include "http/httpserver.h"
 #include "mongoose.h"
+
+
+#include "http/routers/main_router.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -85,12 +87,22 @@ void Starthttp(void *argument);
 /* USER CODE BEGIN 0 */
 static void fn(struct mg_connection *c, int ev, void *ev_data) {
   if (ev == MG_EV_HTTP_MSG) {
-
-	  struct mg_http_message *hm = (struct mg_http_message *) ev_data;
-	  printf("HTTP Body: %.*s\r\n", (int) hm->body.len, hm->body.ptr);
-	  mg_http_reply(c, 200, "", "ok\n");
+	  handle_http_request(c, ev_data);
   }
 }
+
+
+//void mg_random(void *buf, size_t len) {  // Use on-board RNG
+//  extern RNG_HandleTypeDef hrng;
+//  for (size_t n = 0; n < len; n += sizeof(uint32_t)) {
+//    uint32_t r;
+//    HAL_RNG_GenerateRandomNumber(&hrng, &r);
+//    memcpy((char *) buf + n, &r, n + sizeof(r) > len ? len - n : sizeof(r));
+//  }
+//}
+
+
+
 /* USER CODE END 0 */
 
 /**
@@ -434,10 +446,12 @@ void StartDefaultTask(void *argument)
       osDelay(200);
     }
     // Mongoose:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-//    printf("READY, IP: %s\r\n", ip4addr_ntoa(netif_ip4_addr(&gnetif)));
-    MG_INFO(("READY yamson, IP: %s", ip4addr_ntoa(netif_ip4_addr(&gnetif))));
+    MG_INFO(("READY, IP: %s", ip4addr_ntoa(netif_ip4_addr(&gnetif))));
     struct mg_mgr mgr;
     mg_mgr_init(&mgr);
+    mg_log_set(MG_LL_DEBUG);
+
+//    web_init(&mgr);
     mg_http_listen(&mgr, "http://0.0.0.0", fn, &mgr);
 
     osSemaphoreRelease(startDefaultTaskSemaphore);
@@ -445,29 +459,6 @@ void StartDefaultTask(void *argument)
     {
       mg_mgr_poll(&mgr, 500);
     }
-
-//    for(;;)
-//    {
-//      osDelay(1000);
-//    }
-//	struct mg_mgr mgr;
-//	mg_mgr_init(&mgr);
-//
-//	  // Define static IP configuration
-//	  struct mg_tcpip_if mif = {
-//	      .mac = {2, 0, 1, 2, 3, 4},  // Custom MAC address
-//	      .ip = mg_htonl(MG_U32(192, 168, 1, 10)),  // Static IP: 192.168.1.10
-//	      .mask = mg_htonl(MG_U32(255, 255, 255, 0)),  // Subnet mask: 255.255.255.0
-//	      .gw = mg_htonl(MG_U32(192, 168, 1, 1)),  // Gateway: 192.168.1.1
-//	      .driver = &mg_tcpip_driver_stm32h,  // Use STM32 Ethernet driver
-//	  };
-//
-//	  // Initialize TCP/IP stack with static IP
-//	  mg_tcpip_init(&mgr, &mif);
-//
-//	for (;;) mg_mgr_poll(&mgr, 100);
-
-
 
   /* USER CODE END 5 */
 }
