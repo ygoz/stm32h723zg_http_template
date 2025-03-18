@@ -39,3 +39,5 @@ void handle_firmware_upload(struct mg_connection *c,
     mg_http_reply(c, 200, s_json_header, "true\n");
   }
 }
+
+//mg_ota_commit();

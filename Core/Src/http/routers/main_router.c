@@ -16,7 +16,7 @@
 void handle_http_request(struct mg_connection *c, void *ev_data) {
 
 	struct mg_http_message *hm = (struct mg_http_message *) ev_data;
-		  printf("HTTP Body body: %.*s\r\n", (int) hm->body.len, hm->body.ptr);
+//		  printf("HTTP Body body: %.*s\r\n", (int) hm->body.len, hm->body.ptr);
 
 		    if (mg_strcmp(hm->method, mg_str("GET")) == 0) {
 		        GET_requests_router(c, hm);

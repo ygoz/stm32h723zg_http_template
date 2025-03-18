@@ -13,10 +13,16 @@ void POST_requests_router(struct mg_connection *c, struct mg_http_message *hm){
 
 	if (mg_match(hm->uri, mg_str("/api/firmware/upload"), NULL)) {
 	      handle_firmware_upload(c, hm);
+
 	}
 	else if (mg_match(hm->uri, mg_str("/api/ping"), NULL)) {
 		mg_http_reply(c, 200, "", "ok post router\r\n");
+		mg_ota_commit();
+		printf("should be commited");
 	   }
+	else{
+		mg_http_reply(c, 404, "", "this nnnnnoo else post router\r\n");
+	}
 //	if (strncmp(http_header_buffer, "POST /postTest", 14) == 0) {
 
 //		char *http_header = create_http_header(HTTP_OK, 10);

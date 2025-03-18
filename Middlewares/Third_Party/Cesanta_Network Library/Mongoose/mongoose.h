@@ -2633,7 +2633,9 @@ void mg_rpc_list(struct mg_rpc_req *r);
 #define MG_OTA_CUSTOM 100  // Custom implementation
 
 #ifndef MG_OTA
-#define MG_OTA MG_OTA_NONE
+//#define MG_OTA MG_OTA_NONE
+#define MG_OTA MG_OTA_FLASH  // Enable the flash-based OTA implementation
+
 #endif
 
 #if defined(__GNUC__) && !defined(__APPLE__)
@@ -2679,7 +2681,8 @@ MG_IRAM void mg_ota_boot(void);  // Bootloader function
 #define MG_DEVICE_CUSTOM 1000   // Custom implementation
 
 #ifndef MG_DEVICE
-#define MG_DEVICE MG_DEVICE_NONE
+//#define MG_DEVICE MG_DEVICE_NONE
+#define MG_DEVICE MG_DEVICE_STM32H7
 #endif
 
 // Flash information
@@ -2701,7 +2704,7 @@ bool mg_flash_save(void *sector, uint32_t key, const void *buf, size_t len);
 
 void mg_device_reset(void);  // Reboot device immediately
 
-
+uint64_t mg_now(void);
 
 
 

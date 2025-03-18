@@ -5975,6 +5975,7 @@ bool mg_send(struct mg_connection *c, const void *buf, size_t len) {
 #if MG_OTA == MG_OTA_NONE
 bool mg_ota_begin(size_t new_firmware_size) {
   (void) new_firmware_size;
+  printf("this will not work//////////////////////////");
   return true;
 }
 bool mg_ota_write(const void *buf, size_t len) {
@@ -6082,6 +6083,12 @@ MG_IRAM static uint32_t mg_fwkey(int fw) {
   if (bank == 2 && fw == MG_FIRMWARE_PREVIOUS) key--;
   if (bank == 2 && fw == MG_FIRMWARE_CURRENT) key++;
   return key;
+}
+
+static uint64_t s_boot_timestamp = 0;  // Updated by SNTP
+
+uint64_t mg_now(void) {
+  return mg_millis() + s_boot_timestamp;
 }
 
 bool mg_ota_end(void) {
