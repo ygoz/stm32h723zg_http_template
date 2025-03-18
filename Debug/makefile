@@ -28,6 +28,7 @@ RM := rm -rf
 -include Drivers/BSP/Components/lan8742/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/http/routers/subdir.mk
+-include Core/Src/http/FOTA/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
 
@@ -71,7 +72,8 @@ mongoose_eth_template.list \
 
 
 # All Target
-all: main-build
+all:
+	+@$(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
 
 # Main-build Target
 main-build: mongoose_eth_template.elf secondary-outputs
@@ -97,6 +99,10 @@ clean:
 	-$(RM) default.size.stdout mongoose_eth_template.elf mongoose_eth_template.list mongoose_eth_template.map
 	-@echo ' '
 
+post-build:
+	arm-none-eabi-objcopy -O binary mongoose_eth_template.elf mongoose_eth_template.bin
+	-@echo ' '
+
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
 
 fail-specified-linker-script-missing:
@@ -106,6 +112,6 @@ fail-specified-linker-script-missing:
 warn-no-linker-script-specified:
 	@echo 'Warning: No linker script specified. Check the linker settings in the build configuration.'
 
-.PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified
+.PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified post-build
 
 -include ../makefile.targets

@@ -63,7 +63,18 @@ Core/Src/http/routers/get_router.o: ../Core/Src/http/routers/get_router.c \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/def.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h \
  ../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h \
- ../Core/Inc/http/routers/get_router.h
+ ../Core/Inc/http/routers/get_router.h \
+ ../Middlewares/Third_Party/Cesanta_Network\ Library/Mongoose/mongoose.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/sockets.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/netif.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/stats.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/mem.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/memp.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_std.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_priv.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/priv/mem_priv.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/inet.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/errno.h
 ../Middlewares/Third_Party/LwIP/src/include/lwip/api.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h:
 ../LWIP/Target/lwipopts.h:
@@ -130,3 +141,14 @@ Core/Src/http/routers/get_router.o: ../Core/Src/http/routers/get_router.c \
 ../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h:
 ../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h:
 ../Core/Inc/http/routers/get_router.h:
+../Middlewares/Third_Party/Cesanta_Network\ Library/Mongoose/mongoose.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/sockets.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/netif.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/stats.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/mem.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/memp.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_std.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_priv.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/priv/mem_priv.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/inet.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/errno.h:

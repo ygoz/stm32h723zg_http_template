@@ -1,31 +1,22 @@
-/*
- * post_router.c
- *
- *  Created on: Feb 12, 2025
- *      Author: yam
- */
-
 
 #include <string.h>
 #include "lwip/api.h" // For netconn functions
 #include "http/routers/post_router.h"
+#include "mongoose.h"
+
+#include "http/FOTA/firmware_update.h"
 
 
 
 
-//const char http_header[] =
-//	"HTTP/1.1 200 OK\r\n"
-//	"Content-Type: text/plain\r\n"
-//	"Content-Length: 10\r\n"
-//	"Connection: close\r\n"
-//	"\r\n";
-//
-//const char response_body[] = "hello this is http";
+void POST_requests_router(struct mg_connection *c, struct mg_http_message *hm){
 
-//const char message[] = "this is go";
-
-
-void POST_requests_router(struct netconn *conn){
+	if (mg_match(hm->uri, mg_str("/api/firmware/upload"), NULL)) {
+	      handle_firmware_upload(c, hm);
+	}
+	else if (mg_match(hm->uri, mg_str("/api/ping"), NULL)) {
+		mg_http_reply(c, 200, "", "ok post router\r\n");
+	   }
 //	if (strncmp(http_header_buffer, "POST /postTest", 14) == 0) {
 
 //		char *http_header = create_http_header(HTTP_OK, 10);
@@ -40,6 +31,6 @@ void POST_requests_router(struct netconn *conn){
 //		char *content = (char *)calloc(content, sizeof(char));
 //		char *content = "this is message";
 //		http_write_response(conn, HTTP_OK, "this is message2");
-		printf("shmoopoo 3\r\n");
+		printf("shmoopoo post 9\r\n");
 //	}
 }
