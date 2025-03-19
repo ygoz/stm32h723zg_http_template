@@ -16,12 +16,14 @@ void POST_requests_router(struct mg_connection *c, struct mg_http_message *hm){
 
 	}
 	else if (mg_match(hm->uri, mg_str("/api/ping"), NULL)) {
-		mg_http_reply(c, 200, "", "ok post router\r\n");
 		mg_ota_commit();
+		mg_http_reply(c, 200, "", "ok post router\r\n");
+//		mg_device_reset();
+		mg_ota_boot();
 		printf("should be commited");
 	   }
 	else{
-		mg_http_reply(c, 404, "", "this nnnnnoo else post router\r\n");
+		mg_http_reply(c, 404, "", "this jjdcjcjdcjnj else post router\r\n");
 	}
 //	if (strncmp(http_header_buffer, "POST /postTest", 14) == 0) {
 
@@ -37,6 +39,6 @@ void POST_requests_router(struct mg_connection *c, struct mg_http_message *hm){
 //		char *content = (char *)calloc(content, sizeof(char));
 //		char *content = "this is message";
 //		http_write_response(conn, HTTP_OK, "this is message2");
-		printf("shmoopoo post 9\r\n");
+		printf("shmoopoo post 2\r\n");
 //	}
 }
