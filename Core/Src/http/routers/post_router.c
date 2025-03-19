@@ -16,8 +16,8 @@ void POST_requests_router(struct mg_connection *c, struct mg_http_message *hm){
 
 	}
 	else if (mg_match(hm->uri, mg_str("/api/ping"), NULL)) {
-		mg_ota_commit();
 		mg_http_reply(c, 200, "", "ok post router\r\n");
+		mg_ota_commit();
 //		mg_device_reset();
 		mg_ota_boot();
 		printf("should be commited");
