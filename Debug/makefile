@@ -27,6 +27,7 @@ RM := rm -rf
 -include Drivers/STM32H7xx_HAL_Driver/Src/subdir.mk
 -include Drivers/BSP/Components/lan8742/subdir.mk
 -include Core/Startup/subdir.mk
+-include Core/Src/http/web_ui/file_system/subdir.mk
 -include Core/Src/http/routers/subdir.mk
 -include Core/Src/http/FOTA/subdir.mk
 -include Core/Src/subdir.mk
