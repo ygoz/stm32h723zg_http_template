@@ -20,6 +20,15 @@ void GET_requests_router(struct mg_connection *c, struct mg_http_message *hm){
 		HAL_GPIO_TogglePin(GPIOB, LED_GREEN_Pin); // Can be different on your board
 	      mg_http_reply(c, 200, "", "true\n");
 	    }
+	else if (mg_match(hm->uri, mg_str("/mem/ram/get"), NULL)) {
+	    uint32_t free_memory = xPortGetFreeHeapSize();  // Example: Get the available heap memory
+	    uint32_t total_memory = configTOTAL_HEAP_SIZE;  // Total heap memory size from FreeRTOS config
+
+	    // Format the response as JSON or plain text
+	    char response[128];
+	    snprintf(response, sizeof(response), "{\"free_memory\": %u, \"total_memory\": %u}\n", free_memory, total_memory);
+	      mg_http_reply(c, 200, "", response);
+	    }
 	else{
 //		mg_http_reply(c, 200, "", "ok get router\r\n");
 		struct mg_http_serve_opts opts = {.root_dir = "/web_root", .fs = &mg_fs_packed};
