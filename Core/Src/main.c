@@ -85,9 +85,33 @@ void Starthttp(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+uint8_t static inline numconns(struct mg_mgr *mgr) {
+  int n = 0;
+  for (struct mg_connection *t = mgr->conns; t != NULL; t = t->next) {
+//	  printf("IP ADDR 192.168.1.3 at port: %d", t->loc.port);
+	  n++;
+  }
+  return n;
+}
+
+
 static void fn(struct mg_connection *c, int ev, void *ev_data) {
   if (ev == MG_EV_HTTP_MSG) {
 	  handle_http_request(c, ev_data);
+  }
+  if (ev == MG_EV_ACCEPT) {
+	  uint8_t active_connections = numconns(c->mgr);
+	  printf("Active TCP connections: %d\r\n", active_connections);
+	  if (active_connections > 5) {
+        MG_ERROR(("Too many connections\r\n"));
+        c->is_closing = 1;
+//  	  mg_mgr_free(c->mgr);
+//  	  mg_mgr_init(c->mgr);
+	  }
+  }
+  else if (ev == MG_EV_ERROR){
+	  printf("yams print - MG_EV_ERROR /r/n");
   }
 }
 
@@ -448,8 +472,8 @@ void StartDefaultTask(void *argument)
     // Mongoose:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     MG_INFO(("READY, IP: %s", ip4addr_ntoa(netif_ip4_addr(&gnetif))));
     struct mg_mgr mgr;
-    mg_mgr_init(&mgr);
     mg_log_set(MG_LL_DEBUG);
+    mg_mgr_init(&mgr);
 
 //    web_init(&mgr);
     mg_http_listen(&mgr, "http://0.0.0.0", fn, &mgr);
