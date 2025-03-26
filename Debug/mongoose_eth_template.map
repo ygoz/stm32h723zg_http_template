@@ -35709,7 +35709,7 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x08029cac                mg_device_reset
                 0x08029d98                mg_ota_commit
 
-.rodata         0x08029e08     0x660c
+.rodata         0x08029e08    0x12ecc
                 0x08029e08                        . = ALIGN (0x4)
  *(.rodata)
  .rodata        0x08029e08      0x172 ./Core/Src/lwiperf.o
@@ -35724,289 +35724,285 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  *fill*         0x0802a159        0x3 
  .rodata        0x0802a15c       0x8e ./Core/Src/http/routers/post_router.o
  *fill*         0x0802a1ea        0x2 
- .rodata        0x0802a1ec       0x3e ./Core/Src/http/web_ui/file_system/packed_fs.o
- *fill*         0x0802a22a        0x2 
- .rodata        0x0802a22c        0x8 ./LWIP/App/lwip.o
- .rodata        0x0802a234       0xa6 ./LWIP/Target/ethernetif.o
- *fill*         0x0802a2da        0x2 
- .rodata        0x0802a2dc     0x194b ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802bc27        0x1 
- .rodata        0x0802bc28        0x5 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- *fill*         0x0802bc2d        0x3 
- .rodata        0x0802bc30        0xd ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
- *fill*         0x0802bc3d        0x3 
- .rodata        0x0802bc40      0x358 ./Middlewares/Third_Party/LwIP/src/api/api_lib.o
- .rodata        0x0802bf98      0x555 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
- *fill*         0x0802c4ed        0x3 
- .rodata        0x0802c4f0      0x196 ./Middlewares/Third_Party/LwIP/src/api/netbuf.o
- *fill*         0x0802c686        0x2 
- .rodata        0x0802c688      0x3ce ./Middlewares/Third_Party/LwIP/src/api/sockets.o
- *fill*         0x0802ca56        0x2 
- .rodata        0x0802ca58       0xdd ./Middlewares/Third_Party/LwIP/src/api/tcpip.o
- *fill*         0x0802cb35        0x3 
- .rodata        0x0802cb38      0x277 ./Middlewares/Third_Party/LwIP/src/core/mem.o
- *fill*         0x0802cdaf        0x1 
- .rodata        0x0802cdb0       0xeb ./Middlewares/Third_Party/LwIP/src/core/memp.o
- *fill*         0x0802ce9b        0x1 
- .rodata        0x0802ce9c      0x22f ./Middlewares/Third_Party/LwIP/src/core/netif.o
- *fill*         0x0802d0cb        0x1 
- .rodata        0x0802d0cc      0x485 ./Middlewares/Third_Party/LwIP/src/core/pbuf.o
- *fill*         0x0802d551        0x3 
- .rodata        0x0802d554      0x7e0 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
- .rodata        0x0802dd34      0x47e ./Middlewares/Third_Party/LwIP/src/core/tcp_in.o
- *fill*         0x0802e1b2        0x2 
- .rodata        0x0802e1b4      0x81b ./Middlewares/Third_Party/LwIP/src/core/tcp_out.o
- *fill*         0x0802e9cf        0x1 
- .rodata        0x0802e9d0       0xe6 ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
- *fill*         0x0802eab6        0x2 
- .rodata        0x0802eab8      0x364 ./Middlewares/Third_Party/LwIP/src/core/udp.o
- .rodata        0x0802ee1c      0x275 ./Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.o
- *fill*         0x0802f091        0x3 
- .rodata        0x0802f094       0xf8 ./Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.o
- .rodata        0x0802f18c       0x95 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.o
- *fill*         0x0802f221        0x3 
- .rodata        0x0802f224      0x227 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.o
- *fill*         0x0802f44b        0x1 
- .rodata        0x0802f44c       0x94 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
+ .rodata        0x0802a1ec       0x18 ./Core/Src/http/web_ui/file_system/packed_fs.o
+ .rodata        0x0802a204        0x8 ./LWIP/App/lwip.o
+ .rodata        0x0802a20c       0xa6 ./LWIP/Target/ethernetif.o
+ *fill*         0x0802a2b2        0x2 
+ .rodata        0x0802a2b4     0x194b ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0802bbff        0x1 
+ .rodata        0x0802bc00        0x5 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ *fill*         0x0802bc05        0x3 
+ .rodata        0x0802bc08        0xd ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ *fill*         0x0802bc15        0x3 
+ .rodata        0x0802bc18      0x358 ./Middlewares/Third_Party/LwIP/src/api/api_lib.o
+ .rodata        0x0802bf70      0x555 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
+ *fill*         0x0802c4c5        0x3 
+ .rodata        0x0802c4c8      0x196 ./Middlewares/Third_Party/LwIP/src/api/netbuf.o
+ *fill*         0x0802c65e        0x2 
+ .rodata        0x0802c660      0x3ce ./Middlewares/Third_Party/LwIP/src/api/sockets.o
+ *fill*         0x0802ca2e        0x2 
+ .rodata        0x0802ca30       0xdd ./Middlewares/Third_Party/LwIP/src/api/tcpip.o
+ *fill*         0x0802cb0d        0x3 
+ .rodata        0x0802cb10      0x277 ./Middlewares/Third_Party/LwIP/src/core/mem.o
+ *fill*         0x0802cd87        0x1 
+ .rodata        0x0802cd88       0xeb ./Middlewares/Third_Party/LwIP/src/core/memp.o
+ *fill*         0x0802ce73        0x1 
+ .rodata        0x0802ce74      0x22f ./Middlewares/Third_Party/LwIP/src/core/netif.o
+ *fill*         0x0802d0a3        0x1 
+ .rodata        0x0802d0a4      0x485 ./Middlewares/Third_Party/LwIP/src/core/pbuf.o
+ *fill*         0x0802d529        0x3 
+ .rodata        0x0802d52c      0x7e0 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
+ .rodata        0x0802dd0c      0x47e ./Middlewares/Third_Party/LwIP/src/core/tcp_in.o
+ *fill*         0x0802e18a        0x2 
+ .rodata        0x0802e18c      0x81b ./Middlewares/Third_Party/LwIP/src/core/tcp_out.o
+ *fill*         0x0802e9a7        0x1 
+ .rodata        0x0802e9a8       0xe6 ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
+ *fill*         0x0802ea8e        0x2 
+ .rodata        0x0802ea90      0x364 ./Middlewares/Third_Party/LwIP/src/core/udp.o
+ .rodata        0x0802edf4      0x275 ./Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.o
+ *fill*         0x0802f069        0x3 
+ .rodata        0x0802f06c       0xf8 ./Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.o
+ .rodata        0x0802f164       0x95 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.o
+ *fill*         0x0802f1f9        0x3 
+ .rodata        0x0802f1fc      0x227 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.o
+ *fill*         0x0802f423        0x1 
+ .rodata        0x0802f424       0x94 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
  *(.rodata*)
  .rodata.lwiperf_txbuf_const
-                0x0802f4e0      0x640 ./Core/Src/lwiperf.o
+                0x0802f4b8      0x640 ./Core/Src/lwiperf.o
  .rodata.defaultTask_attributes
-                0x0802fb20       0x24 ./Core/Src/main.o
-                0x0802fb20                defaultTask_attributes
+                0x0802faf8       0x24 ./Core/Src/main.o
+                0x0802faf8                defaultTask_attributes
  .rodata.http_test_attributes
-                0x0802fb44       0x24 ./Core/Src/main.o
-                0x0802fb44                http_test_attributes
+                0x0802fb1c       0x24 ./Core/Src/main.o
+                0x0802fb1c                http_test_attributes
  .rodata.__func__.0
-                0x0802fb68       0x11 ./Core/Src/main.o
- *fill*         0x0802fb79        0x3 
+                0x0802fb40       0x11 ./Core/Src/main.o
+ *fill*         0x0802fb51        0x3 
  .rodata.D1CorePrescTable
-                0x0802fb7c       0x10 ./Core/Src/system_stm32h7xx.o
-                0x0802fb7c                D1CorePrescTable
+                0x0802fb54       0x10 ./Core/Src/system_stm32h7xx.o
+                0x0802fb54                D1CorePrescTable
  .rodata.__func__.0
-                0x0802fb8c       0x17 ./Core/Src/http/FOTA/firmware_update.o
- *fill*         0x0802fba3        0x1 
- .rodata.v1     0x0802fba4      0x167 ./Core/Src/http/web_ui/file_system/packed_fs.o
- *fill*         0x0802fd0b        0x1 
- .rodata.v2     0x0802fd0c       0x48 ./Core/Src/http/web_ui/file_system/packed_fs.o
- .rodata.v3     0x0802fd54      0x12f ./Core/Src/http/web_ui/file_system/packed_fs.o
- *fill*         0x0802fe83        0x5 
+                0x0802fb64       0x17 ./Core/Src/http/FOTA/firmware_update.o
+ *fill*         0x0802fb7b        0x1 
+ .rodata.v1     0x0802fb7c     0xcbfa ./Core/Src/http/web_ui/file_system/packed_fs.o
+ *fill*         0x0803c776        0x2 
  .rodata.packed_files
-                0x0802fe88       0x60 ./Core/Src/http/web_ui/file_system/packed_fs.o
+                0x0803c778       0x30 ./Core/Src/http/web_ui/file_system/packed_fs.o
  .rodata.UARTPrescTable
-                0x0802fee8       0x18 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
-                0x0802fee8                UARTPrescTable
+                0x0803c7a8       0x18 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
+                0x0803c7a8                UARTPrescTable
  .rodata.numerator.1
-                0x0802ff00        0x8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
+                0x0803c7c0        0x8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
  .rodata.denominator.0
-                0x0802ff08        0x8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
+                0x0803c7c8        0x8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
  .rodata.memp_RX_POOL
-                0x0802ff10        0xc ./LWIP/Target/ethernetif.o
-                0x0802ff10                memp_RX_POOL
+                0x0803c7d0        0xc ./LWIP/Target/ethernetif.o
+                0x0803c7d0                memp_RX_POOL
  .rodata.__func__.49
-                0x0802ff1c        0xc ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+                0x0803c7dc        0xc ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
  .rodata.__func__.48
-                0x0802ff28        0xe ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ff36        0x2 
+                0x0803c7e8        0xe ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c7f6        0x2 
  .rodata.__func__.47
-                0x0802ff38       0x18 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+                0x0803c7f8       0x18 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
  .rodata.__func__.46
-                0x0802ff50        0xe ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ff5e        0x2 
+                0x0803c810        0xe ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c81e        0x2 
  .rodata.__func__.44
-                0x0802ff60        0xf ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ff6f        0x1 
+                0x0803c820        0xf ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c82f        0x1 
  .rodata.__func__.43
-                0x0802ff70        0xf ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ff7f        0x1 
+                0x0803c830        0xf ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c83f        0x1 
  .rodata.__func__.39
-                0x0802ff80        0x9 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ff89        0x3 
+                0x0803c840        0x9 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c849        0x3 
  .rodata.__func__.37
-                0x0802ff8c        0xd ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ff99        0x3 
+                0x0803c84c        0xd ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c859        0x3 
  .rodata.__func__.35
-                0x0802ff9c        0x8 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+                0x0803c85c        0x8 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
  .rodata.__func__.34
-                0x0802ffa4       0x10 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+                0x0803c864       0x10 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
  .rodata.__func__.31
-                0x0802ffb4        0xe ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ffc2        0x2 
+                0x0803c874        0xe ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c882        0x2 
  .rodata.__func__.29
-                0x0802ffc4        0xa ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ffce        0x2 
+                0x0803c884        0xa ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c88e        0x2 
  .rodata.__func__.27
-                0x0802ffd0        0xd ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ffdd        0x3 
+                0x0803c890        0xd ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c89d        0x3 
  .rodata.__func__.26
-                0x0802ffe0        0xd ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802ffed        0x3 
+                0x0803c8a0        0xd ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c8ad        0x3 
  .rodata.__func__.25
-                0x0802fff0        0xb ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0802fffb        0x1 
+                0x0803c8b0        0xb ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c8bb        0x1 
  .rodata.__func__.24
-                0x0802fffc        0xb ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x08030007        0x1 
+                0x0803c8bc        0xb ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c8c7        0x1 
  .rodata.__func__.23
-                0x08030008        0xe ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x08030016        0x2 
+                0x0803c8c8        0xe ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c8d6        0x2 
  .rodata.__func__.14
-                0x08030018        0x6 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0803001e        0x2 
+                0x0803c8d8        0x6 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c8de        0x2 
  .rodata.__func__.13
-                0x08030020        0xb ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0803002b        0x1 
+                0x0803c8e0        0xb ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c8eb        0x1 
  .rodata.__func__.11
-                0x0803002c       0x11 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0803003d        0x3 
+                0x0803c8ec       0x11 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c8fd        0x3 
  .rodata.__func__.10
-                0x08030040        0x9 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x08030049        0x3 
+                0x0803c900        0x9 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c909        0x3 
  .rodata.__func__.9
-                0x0803004c        0xa ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x08030056        0x2 
+                0x0803c90c        0xa ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c916        0x2 
  .rodata.__func__.8
-                0x08030058        0xb ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x08030063        0x1 
+                0x0803c918        0xb ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c923        0x1 
  .rodata.__func__.6
-                0x08030064        0xc ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+                0x0803c924        0xc ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
  .rodata.__func__.5
-                0x08030070        0xa ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- *fill*         0x0803007a        0x2 
+                0x0803c930        0xa ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ *fill*         0x0803c93a        0x2 
  .rodata.__func__.3
-                0x0803007c        0xc ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+                0x0803c93c        0xc ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
  .rodata.crclut.2
-                0x08030088       0x40 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+                0x0803c948       0x40 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
  .rodata.netconn_aborted
-                0x080300c8        0x1 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
-                0x080300c8                netconn_aborted
+                0x0803c988        0x1 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
+                0x0803c988                netconn_aborted
  .rodata.netconn_reset
-                0x080300c9        0x1 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
-                0x080300c9                netconn_reset
+                0x0803c989        0x1 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
+                0x0803c989                netconn_reset
  .rodata.netconn_closed
-                0x080300ca        0x1 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
-                0x080300ca                netconn_closed
- *fill*         0x080300cb        0x1 
+                0x0803c98a        0x1 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
+                0x0803c98a                netconn_closed
+ *fill*         0x0803c98b        0x1 
  .rodata.err_to_errno_table
-                0x080300cc       0x44 ./Middlewares/Third_Party/LwIP/src/api/err.o
+                0x0803c98c       0x44 ./Middlewares/Third_Party/LwIP/src/api/err.o
  .rodata.memp_UDP_PCB
-                0x08030110        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030110                memp_UDP_PCB
+                0x0803c9d0        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803c9d0                memp_UDP_PCB
  .rodata.memp_TCP_PCB
-                0x0803011c        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x0803011c                memp_TCP_PCB
+                0x0803c9dc        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803c9dc                memp_TCP_PCB
  .rodata.memp_TCP_PCB_LISTEN
-                0x08030128        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030128                memp_TCP_PCB_LISTEN
+                0x0803c9e8        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803c9e8                memp_TCP_PCB_LISTEN
  .rodata.memp_TCP_SEG
-                0x08030134        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030134                memp_TCP_SEG
+                0x0803c9f4        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803c9f4                memp_TCP_SEG
  .rodata.memp_REASSDATA
-                0x08030140        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030140                memp_REASSDATA
+                0x0803ca00        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca00                memp_REASSDATA
  .rodata.memp_FRAG_PBUF
-                0x0803014c        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x0803014c                memp_FRAG_PBUF
+                0x0803ca0c        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca0c                memp_FRAG_PBUF
  .rodata.memp_NETBUF
-                0x08030158        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030158                memp_NETBUF
+                0x0803ca18        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca18                memp_NETBUF
  .rodata.memp_NETCONN
-                0x08030164        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030164                memp_NETCONN
+                0x0803ca24        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca24                memp_NETCONN
  .rodata.memp_TCPIP_MSG_API
-                0x08030170        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030170                memp_TCPIP_MSG_API
+                0x0803ca30        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca30                memp_TCPIP_MSG_API
  .rodata.memp_TCPIP_MSG_INPKT
-                0x0803017c        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x0803017c                memp_TCPIP_MSG_INPKT
+                0x0803ca3c        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca3c                memp_TCPIP_MSG_INPKT
  .rodata.memp_SYS_TIMEOUT
-                0x08030188        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030188                memp_SYS_TIMEOUT
+                0x0803ca48        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca48                memp_SYS_TIMEOUT
  .rodata.memp_PBUF
-                0x08030194        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x08030194                memp_PBUF
+                0x0803ca54        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca54                memp_PBUF
  .rodata.memp_PBUF_POOL
-                0x080301a0        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x080301a0                memp_PBUF_POOL
+                0x0803ca60        0xc ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca60                memp_PBUF_POOL
  .rodata.memp_pools
-                0x080301ac       0x34 ./Middlewares/Third_Party/LwIP/src/core/memp.o
-                0x080301ac                memp_pools
+                0x0803ca6c       0x34 ./Middlewares/Third_Party/LwIP/src/core/memp.o
+                0x0803ca6c                memp_pools
  .rodata.tcp_backoff
-                0x080301e0        0xd ./Middlewares/Third_Party/LwIP/src/core/tcp.o
- *fill*         0x080301ed        0x3 
+                0x0803caa0        0xd ./Middlewares/Third_Party/LwIP/src/core/tcp.o
+ *fill*         0x0803caad        0x3 
  .rodata.tcp_persist_backoff
-                0x080301f0        0x7 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
- *fill*         0x080301f7        0x1 
+                0x0803cab0        0x7 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
+ *fill*         0x0803cab7        0x1 
  .rodata.tcp_pcb_lists
-                0x080301f8       0x10 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
-                0x080301f8                tcp_pcb_lists
+                0x0803cab8       0x10 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
+                0x0803cab8                tcp_pcb_lists
  .rodata.lwip_cyclic_timers
-                0x08030208       0x18 ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
-                0x08030208                lwip_cyclic_timers
+                0x0803cac8       0x18 ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
+                0x0803cac8                lwip_cyclic_timers
  .rodata.ip_addr_any
-                0x08030220        0x4 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.o
-                0x08030220                ip_addr_any
+                0x0803cae0        0x4 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.o
+                0x0803cae0                ip_addr_any
  .rodata.ethbroadcast
-                0x08030224        0x6 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
-                0x08030224                ethbroadcast
- *fill*         0x0803022a        0x2 
+                0x0803cae4        0x6 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
+                0x0803cae4                ethbroadcast
+ *fill*         0x0803caea        0x2 
  .rodata.ethzero
-                0x0803022c        0x6 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
-                0x0803022c                ethzero
+                0x0803caec        0x6 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
+                0x0803caec                ethzero
  .rodata.__assert_func.str1.1
-                0x08030232       0x3c C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-assert.o)
+                0x0803caf2       0x3c C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-assert.o)
                                  0x3d (size before relaxing)
  .rodata.srand.str1.1
-                0x0803026e       0x6f C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-rand.o)
+                0x0803cb2e       0x6f C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-rand.o)
  .rodata._ctype_
-                0x080302dd      0x101 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-ctype_.o)
-                0x080302dd                _ctype_
+                0x0803cb9d      0x101 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-ctype_.o)
+                0x0803cb9d                _ctype_
  .rodata._vfprintf_r.str1.1
-                0x080303de       0x11 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-nano-vfprintf.o)
+                0x0803cc9e       0x11 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x080303ef       0x22 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-nano-vfprintf_i.o)
-                0x08030414                        . = ALIGN (0x4)
- *fill*         0x08030411        0x3 
+                0x0803ccaf       0x22 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0803ccd4                        . = ALIGN (0x4)
+ *fill*         0x0803ccd1        0x3 
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08030414        0x8
-                0x08030414                        __exidx_start = .
+.ARM            0x0803ccd4        0x8
+                0x0803ccd4                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08030414        0x8 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-strcmp.o)
- .ARM.exidx     0x0803041c        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-memchr.o)
+ .ARM.exidx     0x0803ccd4        0x8 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-strcmp.o)
+ .ARM.exidx     0x0803ccdc        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-memchr.o)
                                   0x8 (size before relaxing)
- .ARM.exidx     0x0803041c        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-strlen.o)
+ .ARM.exidx     0x0803ccdc        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-strlen.o)
                                   0x8 (size before relaxing)
- .ARM.exidx     0x0803041c        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0803ccdc        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x0803041c                        __exidx_end = .
+                0x0803ccdc                        __exidx_end = .
 
-.rel.dyn        0x0803041c        0x0
- .rel.iplt      0x0803041c        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+.rel.dyn        0x0803ccdc        0x0
+ .rel.iplt      0x0803ccdc        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
 
-.preinit_array  0x0803041c        0x0
-                0x0803041c                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0803ccdc        0x0
+                0x0803ccdc                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0803041c                        PROVIDE (__preinit_array_end = .)
+                0x0803ccdc                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0803041c        0x4
-                0x0803041c                        PROVIDE (__init_array_start = .)
+.init_array     0x0803ccdc        0x4
+                0x0803ccdc                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0803041c        0x4 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
-                0x08030420                        PROVIDE (__init_array_end = .)
+ .init_array    0x0803ccdc        0x4 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+                0x0803cce0                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x08030420        0x4
+.fini_array     0x0803cce0        0x4
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08030420        0x4 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+ .fini_array    0x0803cce0        0x4 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08030424                        _sidata = LOADADDR (.data)
+                0x0803cce4                        _sidata = LOADADDR (.data)
 
-.data           0x24000000      0x2d4 load address 0x08030424
+.data           0x24000000      0x2d4 load address 0x0803cce4
                 0x24000000                        . = ALIGN (0x4)
                 0x24000000                        _sdata = .
  *(.data)
@@ -36064,11 +36060,11 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x240002d4                        . = ALIGN (0x4)
                 0x240002d4                        _edata = .
 
-.igot.plt       0x240002d4        0x0 load address 0x080306f8
+.igot.plt       0x240002d4        0x0 load address 0x0803cfb8
  .igot.plt      0x240002d4        0x0 C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
                 0x240002d4                        . = ALIGN (0x4)
 
-.bss            0x240002d8    0x1536c load address 0x080306f8
+.bss            0x240002d8    0x1536c load address 0x0803cfb8
                 0x240002d8                        _sbss = .
                 0x240002d8                        __bss_start__ = _sbss
  *(.bss)
@@ -36452,7 +36448,7 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x24015644                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x24015644      0x604 load address 0x080306f8
+                0x24015644      0x604 load address 0x0803cfb8
                 0x24015648                        . = ALIGN (0x8)
  *fill*         0x24015644        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -36766,7 +36762,7 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a
 LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard\libgcc.a
 
-.debug_info     0x00000000    0x50e83
+.debug_info     0x00000000    0x50e38
  .debug_info    0x00000000       0xd9 ./Core/Src/freertos.o
  .debug_info    0x000000d9     0x1607 ./Core/Src/lwiperf.o
  .debug_info    0x000016e0     0x2add ./Core/Src/main.o
@@ -36780,60 +36776,60 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_info    0x0000a465      0xa22 ./Core/Src/http/routers/get_router.o
  .debug_info    0x0000ae87      0x6a9 ./Core/Src/http/routers/main_router.o
  .debug_info    0x0000b530      0x6b7 ./Core/Src/http/routers/post_router.o
- .debug_info    0x0000bbe7      0x246 ./Core/Src/http/web_ui/file_system/packed_fs.o
- .debug_info    0x0000be2d       0x30 ./Core/Startup/startup_stm32h723zgtx.o
- .debug_info    0x0000be5d      0x5f6 ./Drivers/BSP/Components/lan8742/lan8742.o
- .debug_info    0x0000c453     0x1698 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
- .debug_info    0x0000daeb     0x1054 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
- .debug_info    0x0000eb3f      0xb67 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
- .debug_info    0x0000f6a6     0x2935 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.o
- .debug_info    0x00011fdb      0xc5c ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
- .debug_info    0x00012c37      0xdc4 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
- .debug_info    0x000139fb      0xd92 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
- .debug_info    0x0001478d     0x11d8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
- .debug_info    0x00015965      0x4c7 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rng.o
- .debug_info    0x00015e2c     0x2b59 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
- .debug_info    0x00018985     0x188f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
- .debug_info    0x0001a214     0x4995 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
- .debug_info    0x0001eba9      0xf65 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
- .debug_info    0x0001fb0e      0x96d ./LWIP/App/lwip.o
- .debug_info    0x0002047b     0x346f ./LWIP/Target/ethernetif.o
- .debug_info    0x000238ea     0xacc9 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- .debug_info    0x0002e5b3     0x4480 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
- .debug_info    0x00032a33      0x2af ./Middlewares/Third_Party/FreeRTOS/Source/list.o
- .debug_info    0x00032ce2     0x1b79 ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
- .debug_info    0x0003485b     0x28d9 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- .debug_info    0x00037134     0x1b50 ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
- .debug_info    0x00038c84      0x4de ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
- .debug_info    0x00039162      0x4d5 ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_info    0x00039637     0x1acf ./Middlewares/Third_Party/LwIP/src/api/api_lib.o
- .debug_info    0x0003b106     0x1e5c ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
- .debug_info    0x0003cf62      0x10f ./Middlewares/Third_Party/LwIP/src/api/err.o
- .debug_info    0x0003d071      0x60b ./Middlewares/Third_Party/LwIP/src/api/netbuf.o
- .debug_info    0x0003d67c     0x3748 ./Middlewares/Third_Party/LwIP/src/api/sockets.o
- .debug_info    0x00040dc4      0xbc8 ./Middlewares/Third_Party/LwIP/src/api/tcpip.o
- .debug_info    0x0004198c      0x389 ./Middlewares/Third_Party/LwIP/src/core/def.o
- .debug_info    0x00041d15      0x618 ./Middlewares/Third_Party/LwIP/src/core/inet_chksum.o
- .debug_info    0x0004232d       0xf3 ./Middlewares/Third_Party/LwIP/src/core/init.o
- .debug_info    0x00042420      0x504 ./Middlewares/Third_Party/LwIP/src/core/ip.o
- .debug_info    0x00042924      0x6c0 ./Middlewares/Third_Party/LwIP/src/core/mem.o
- .debug_info    0x00042fe4      0x74a ./Middlewares/Third_Party/LwIP/src/core/memp.o
- .debug_info    0x0004372e      0xc1c ./Middlewares/Third_Party/LwIP/src/core/netif.o
- .debug_info    0x0004434a     0x18b4 ./Middlewares/Third_Party/LwIP/src/core/pbuf.o
- .debug_info    0x00045bfe     0x1d96 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
- .debug_info    0x00047994     0x15ac ./Middlewares/Third_Party/LwIP/src/core/tcp_in.o
- .debug_info    0x00048f40     0x19a7 ./Middlewares/Third_Party/LwIP/src/core/tcp_out.o
- .debug_info    0x0004a8e7      0xcc5 ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
- .debug_info    0x0004b5ac      0xee6 ./Middlewares/Third_Party/LwIP/src/core/udp.o
- .debug_info    0x0004c492      0xe7f ./Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.o
- .debug_info    0x0004d311      0x960 ./Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.o
- .debug_info    0x0004dc71      0xa23 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.o
- .debug_info    0x0004e694      0x6d7 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.o
- .debug_info    0x0004ed6b      0xdee ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.o
- .debug_info    0x0004fb59      0x75c ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
- .debug_info    0x000502b5      0xbce ./Middlewares/Third_Party/LwIP/system/OS/sys_arch.o
+ .debug_info    0x0000bbe7      0x1fb ./Core/Src/http/web_ui/file_system/packed_fs.o
+ .debug_info    0x0000bde2       0x30 ./Core/Startup/startup_stm32h723zgtx.o
+ .debug_info    0x0000be12      0x5f6 ./Drivers/BSP/Components/lan8742/lan8742.o
+ .debug_info    0x0000c408     0x1698 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
+ .debug_info    0x0000daa0     0x1054 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
+ .debug_info    0x0000eaf4      0xb67 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
+ .debug_info    0x0000f65b     0x2935 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.o
+ .debug_info    0x00011f90      0xc5c ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
+ .debug_info    0x00012bec      0xdc4 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
+ .debug_info    0x000139b0      0xd92 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
+ .debug_info    0x00014742     0x11d8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
+ .debug_info    0x0001591a      0x4c7 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rng.o
+ .debug_info    0x00015de1     0x2b59 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
+ .debug_info    0x0001893a     0x188f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
+ .debug_info    0x0001a1c9     0x4995 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
+ .debug_info    0x0001eb5e      0xf65 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
+ .debug_info    0x0001fac3      0x96d ./LWIP/App/lwip.o
+ .debug_info    0x00020430     0x346f ./LWIP/Target/ethernetif.o
+ .debug_info    0x0002389f     0xacc9 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ .debug_info    0x0002e568     0x4480 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
+ .debug_info    0x000329e8      0x2af ./Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_info    0x00032c97     0x1b79 ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_info    0x00034810     0x28d9 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_info    0x000370e9     0x1b50 ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_info    0x00038c39      0x4de ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_info    0x00039117      0x4d5 ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_info    0x000395ec     0x1acf ./Middlewares/Third_Party/LwIP/src/api/api_lib.o
+ .debug_info    0x0003b0bb     0x1e5c ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
+ .debug_info    0x0003cf17      0x10f ./Middlewares/Third_Party/LwIP/src/api/err.o
+ .debug_info    0x0003d026      0x60b ./Middlewares/Third_Party/LwIP/src/api/netbuf.o
+ .debug_info    0x0003d631     0x3748 ./Middlewares/Third_Party/LwIP/src/api/sockets.o
+ .debug_info    0x00040d79      0xbc8 ./Middlewares/Third_Party/LwIP/src/api/tcpip.o
+ .debug_info    0x00041941      0x389 ./Middlewares/Third_Party/LwIP/src/core/def.o
+ .debug_info    0x00041cca      0x618 ./Middlewares/Third_Party/LwIP/src/core/inet_chksum.o
+ .debug_info    0x000422e2       0xf3 ./Middlewares/Third_Party/LwIP/src/core/init.o
+ .debug_info    0x000423d5      0x504 ./Middlewares/Third_Party/LwIP/src/core/ip.o
+ .debug_info    0x000428d9      0x6c0 ./Middlewares/Third_Party/LwIP/src/core/mem.o
+ .debug_info    0x00042f99      0x74a ./Middlewares/Third_Party/LwIP/src/core/memp.o
+ .debug_info    0x000436e3      0xc1c ./Middlewares/Third_Party/LwIP/src/core/netif.o
+ .debug_info    0x000442ff     0x18b4 ./Middlewares/Third_Party/LwIP/src/core/pbuf.o
+ .debug_info    0x00045bb3     0x1d96 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
+ .debug_info    0x00047949     0x15ac ./Middlewares/Third_Party/LwIP/src/core/tcp_in.o
+ .debug_info    0x00048ef5     0x19a7 ./Middlewares/Third_Party/LwIP/src/core/tcp_out.o
+ .debug_info    0x0004a89c      0xcc5 ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
+ .debug_info    0x0004b561      0xee6 ./Middlewares/Third_Party/LwIP/src/core/udp.o
+ .debug_info    0x0004c447      0xe7f ./Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.o
+ .debug_info    0x0004d2c6      0x960 ./Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.o
+ .debug_info    0x0004dc26      0xa23 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.o
+ .debug_info    0x0004e649      0x6d7 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.o
+ .debug_info    0x0004ed20      0xdee ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.o
+ .debug_info    0x0004fb0e      0x75c ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
+ .debug_info    0x0005026a      0xbce ./Middlewares/Third_Party/LwIP/system/OS/sys_arch.o
 
-.debug_abbrev   0x00000000     0xa0a3
+.debug_abbrev   0x00000000     0xa0a2
  .debug_abbrev  0x00000000       0x7c ./Core/Src/freertos.o
  .debug_abbrev  0x0000007c      0x31a ./Core/Src/lwiperf.o
  .debug_abbrev  0x00000396      0x462 ./Core/Src/main.o
@@ -36847,58 +36843,58 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_abbrev  0x000013d8      0x1c0 ./Core/Src/http/routers/get_router.o
  .debug_abbrev  0x00001598      0x189 ./Core/Src/http/routers/main_router.o
  .debug_abbrev  0x00001721      0x1a9 ./Core/Src/http/routers/post_router.o
- .debug_abbrev  0x000018ca      0x126 ./Core/Src/http/web_ui/file_system/packed_fs.o
- .debug_abbrev  0x000019f0       0x24 ./Core/Startup/startup_stm32h723zgtx.o
- .debug_abbrev  0x00001a14      0x14c ./Drivers/BSP/Components/lan8742/lan8742.o
- .debug_abbrev  0x00001b60      0x29e ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
- .debug_abbrev  0x00001dfe      0x339 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
- .debug_abbrev  0x00002137      0x248 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
- .debug_abbrev  0x0000237f      0x2d9 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.o
- .debug_abbrev  0x00002658      0x1fe ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
- .debug_abbrev  0x00002856      0x295 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
- .debug_abbrev  0x00002aeb      0x2b0 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
- .debug_abbrev  0x00002d9b      0x269 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
- .debug_abbrev  0x00003004      0x1c5 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rng.o
- .debug_abbrev  0x000031c9      0x26f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
- .debug_abbrev  0x00003438      0x28f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
- .debug_abbrev  0x000036c7      0x33d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
- .debug_abbrev  0x00003a04      0x2d3 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
- .debug_abbrev  0x00003cd7      0x24b ./LWIP/App/lwip.o
- .debug_abbrev  0x00003f22      0x454 ./LWIP/Target/ethernetif.o
- .debug_abbrev  0x00004376      0x589 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- .debug_abbrev  0x000048ff      0x54d ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
- .debug_abbrev  0x00004e4c       0xf5 ./Middlewares/Third_Party/FreeRTOS/Source/list.o
- .debug_abbrev  0x00004f41      0x3b6 ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
- .debug_abbrev  0x000052f7      0x3fe ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- .debug_abbrev  0x000056f5      0x368 ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
- .debug_abbrev  0x00005a5d      0x25c ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
- .debug_abbrev  0x00005cb9      0x21d ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_abbrev  0x00005ed6      0x30f ./Middlewares/Third_Party/LwIP/src/api/api_lib.o
- .debug_abbrev  0x000061e5      0x38c ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
- .debug_abbrev  0x00006571       0x91 ./Middlewares/Third_Party/LwIP/src/api/err.o
- .debug_abbrev  0x00006602      0x1bb ./Middlewares/Third_Party/LwIP/src/api/netbuf.o
- .debug_abbrev  0x000067bd      0x35d ./Middlewares/Third_Party/LwIP/src/api/sockets.o
- .debug_abbrev  0x00006b1a      0x348 ./Middlewares/Third_Party/LwIP/src/api/tcpip.o
- .debug_abbrev  0x00006e62      0x13a ./Middlewares/Third_Party/LwIP/src/core/def.o
- .debug_abbrev  0x00006f9c      0x194 ./Middlewares/Third_Party/LwIP/src/core/inet_chksum.o
- .debug_abbrev  0x00007130       0x8c ./Middlewares/Third_Party/LwIP/src/core/init.o
- .debug_abbrev  0x000071bc      0x132 ./Middlewares/Third_Party/LwIP/src/core/ip.o
- .debug_abbrev  0x000072ee      0x201 ./Middlewares/Third_Party/LwIP/src/core/mem.o
- .debug_abbrev  0x000074ef      0x254 ./Middlewares/Third_Party/LwIP/src/core/memp.o
- .debug_abbrev  0x00007743      0x2eb ./Middlewares/Third_Party/LwIP/src/core/netif.o
- .debug_abbrev  0x00007a2e      0x34a ./Middlewares/Third_Party/LwIP/src/core/pbuf.o
- .debug_abbrev  0x00007d78      0x3e3 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
- .debug_abbrev  0x0000815b      0x346 ./Middlewares/Third_Party/LwIP/src/core/tcp_in.o
- .debug_abbrev  0x000084a1      0x31c ./Middlewares/Third_Party/LwIP/src/core/tcp_out.o
- .debug_abbrev  0x000087bd      0x2e8 ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
- .debug_abbrev  0x00008aa5      0x36d ./Middlewares/Third_Party/LwIP/src/core/udp.o
- .debug_abbrev  0x00008e12      0x2c3 ./Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.o
- .debug_abbrev  0x000090d5      0x27d ./Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.o
- .debug_abbrev  0x00009352      0x283 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.o
- .debug_abbrev  0x000095d5      0x273 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.o
- .debug_abbrev  0x00009848      0x304 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.o
- .debug_abbrev  0x00009b4c      0x284 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
- .debug_abbrev  0x00009dd0      0x2d3 ./Middlewares/Third_Party/LwIP/system/OS/sys_arch.o
+ .debug_abbrev  0x000018ca      0x125 ./Core/Src/http/web_ui/file_system/packed_fs.o
+ .debug_abbrev  0x000019ef       0x24 ./Core/Startup/startup_stm32h723zgtx.o
+ .debug_abbrev  0x00001a13      0x14c ./Drivers/BSP/Components/lan8742/lan8742.o
+ .debug_abbrev  0x00001b5f      0x29e ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
+ .debug_abbrev  0x00001dfd      0x339 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
+ .debug_abbrev  0x00002136      0x248 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
+ .debug_abbrev  0x0000237e      0x2d9 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.o
+ .debug_abbrev  0x00002657      0x1fe ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
+ .debug_abbrev  0x00002855      0x295 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
+ .debug_abbrev  0x00002aea      0x2b0 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
+ .debug_abbrev  0x00002d9a      0x269 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
+ .debug_abbrev  0x00003003      0x1c5 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rng.o
+ .debug_abbrev  0x000031c8      0x26f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
+ .debug_abbrev  0x00003437      0x28f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
+ .debug_abbrev  0x000036c6      0x33d ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
+ .debug_abbrev  0x00003a03      0x2d3 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
+ .debug_abbrev  0x00003cd6      0x24b ./LWIP/App/lwip.o
+ .debug_abbrev  0x00003f21      0x454 ./LWIP/Target/ethernetif.o
+ .debug_abbrev  0x00004375      0x589 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ .debug_abbrev  0x000048fe      0x54d ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
+ .debug_abbrev  0x00004e4b       0xf5 ./Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_abbrev  0x00004f40      0x3b6 ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_abbrev  0x000052f6      0x3fe ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_abbrev  0x000056f4      0x368 ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_abbrev  0x00005a5c      0x25c ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_abbrev  0x00005cb8      0x21d ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_abbrev  0x00005ed5      0x30f ./Middlewares/Third_Party/LwIP/src/api/api_lib.o
+ .debug_abbrev  0x000061e4      0x38c ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
+ .debug_abbrev  0x00006570       0x91 ./Middlewares/Third_Party/LwIP/src/api/err.o
+ .debug_abbrev  0x00006601      0x1bb ./Middlewares/Third_Party/LwIP/src/api/netbuf.o
+ .debug_abbrev  0x000067bc      0x35d ./Middlewares/Third_Party/LwIP/src/api/sockets.o
+ .debug_abbrev  0x00006b19      0x348 ./Middlewares/Third_Party/LwIP/src/api/tcpip.o
+ .debug_abbrev  0x00006e61      0x13a ./Middlewares/Third_Party/LwIP/src/core/def.o
+ .debug_abbrev  0x00006f9b      0x194 ./Middlewares/Third_Party/LwIP/src/core/inet_chksum.o
+ .debug_abbrev  0x0000712f       0x8c ./Middlewares/Third_Party/LwIP/src/core/init.o
+ .debug_abbrev  0x000071bb      0x132 ./Middlewares/Third_Party/LwIP/src/core/ip.o
+ .debug_abbrev  0x000072ed      0x201 ./Middlewares/Third_Party/LwIP/src/core/mem.o
+ .debug_abbrev  0x000074ee      0x254 ./Middlewares/Third_Party/LwIP/src/core/memp.o
+ .debug_abbrev  0x00007742      0x2eb ./Middlewares/Third_Party/LwIP/src/core/netif.o
+ .debug_abbrev  0x00007a2d      0x34a ./Middlewares/Third_Party/LwIP/src/core/pbuf.o
+ .debug_abbrev  0x00007d77      0x3e3 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
+ .debug_abbrev  0x0000815a      0x346 ./Middlewares/Third_Party/LwIP/src/core/tcp_in.o
+ .debug_abbrev  0x000084a0      0x31c ./Middlewares/Third_Party/LwIP/src/core/tcp_out.o
+ .debug_abbrev  0x000087bc      0x2e8 ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
+ .debug_abbrev  0x00008aa4      0x36d ./Middlewares/Third_Party/LwIP/src/core/udp.o
+ .debug_abbrev  0x00008e11      0x2c3 ./Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.o
+ .debug_abbrev  0x000090d4      0x27d ./Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.o
+ .debug_abbrev  0x00009351      0x283 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.o
+ .debug_abbrev  0x000095d4      0x273 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.o
+ .debug_abbrev  0x00009847      0x304 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.o
+ .debug_abbrev  0x00009b4b      0x284 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
+ .debug_abbrev  0x00009dcf      0x2d3 ./Middlewares/Third_Party/LwIP/system/OS/sys_arch.o
 
 .debug_aranges  0x00000000     0x3960
  .debug_aranges
@@ -37446,7 +37442,7 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0004b59b      0x60f ./Middlewares/Third_Party/LwIP/system/OS/sys_arch.o
  .debug_macro   0x0004bbaa       0x11 ./Middlewares/Third_Party/LwIP/system/OS/sys_arch.o
 
-.debug_line     0x00000000    0x5c150
+.debug_line     0x00000000    0x5c14d
  .debug_line    0x00000000      0xa96 ./Core/Src/freertos.o
  .debug_line    0x00000a96     0x16cf ./Core/Src/lwiperf.o
  .debug_line    0x00002165     0x13ee ./Core/Src/main.o
@@ -37460,58 +37456,58 @@ LOAD C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x00008d69      0xf73 ./Core/Src/http/routers/get_router.o
  .debug_line    0x00009cdc      0xf42 ./Core/Src/http/routers/main_router.o
  .debug_line    0x0000ac1e      0xf7e ./Core/Src/http/routers/post_router.o
- .debug_line    0x0000bb9c      0x6cb ./Core/Src/http/web_ui/file_system/packed_fs.o
- .debug_line    0x0000c267       0x7a ./Core/Startup/startup_stm32h723zgtx.o
- .debug_line    0x0000c2e1      0x898 ./Drivers/BSP/Components/lan8742/lan8742.o
- .debug_line    0x0000cb79      0xf7e ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
- .debug_line    0x0000daf7      0xef2 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
- .debug_line    0x0000e9e9     0x2853 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
- .debug_line    0x0001123c     0x1c57 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.o
- .debug_line    0x00012e93      0xdb1 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
- .debug_line    0x00013c44      0xf5f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
- .debug_line    0x00014ba3     0x13c2 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
- .debug_line    0x00015f65     0x1b74 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
- .debug_line    0x00017ad9      0xc75 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rng.o
- .debug_line    0x0001874e     0x405f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
- .debug_line    0x0001c7ad     0x1ff8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
- .debug_line    0x0001e7a5     0x3fc6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
- .debug_line    0x0002276b      0xfcb ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
- .debug_line    0x00023736      0xfe7 ./LWIP/App/lwip.o
- .debug_line    0x0002471d     0x1555 ./LWIP/Target/ethernetif.o
- .debug_line    0x00025c72     0xaef6 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
- .debug_line    0x00030b68     0x248f ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
- .debug_line    0x00032ff7      0x797 ./Middlewares/Third_Party/FreeRTOS/Source/list.o
- .debug_line    0x0003378e     0x1761 ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
- .debug_line    0x00034eef     0x1e66 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- .debug_line    0x00036d55      0xe1f ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
- .debug_line    0x00037b74      0x960 ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
- .debug_line    0x000384d4      0x9c2 ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_line    0x00038e96     0x1711 ./Middlewares/Third_Party/LwIP/src/api/api_lib.o
- .debug_line    0x0003a5a7     0x1f81 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
- .debug_line    0x0003c528      0xdbc ./Middlewares/Third_Party/LwIP/src/api/err.o
- .debug_line    0x0003d2e4     0x105d ./Middlewares/Third_Party/LwIP/src/api/netbuf.o
- .debug_line    0x0003e341     0x2b87 ./Middlewares/Third_Party/LwIP/src/api/sockets.o
- .debug_line    0x00040ec8     0x1233 ./Middlewares/Third_Party/LwIP/src/api/tcpip.o
- .debug_line    0x000420fb      0xf4a ./Middlewares/Third_Party/LwIP/src/core/def.o
- .debug_line    0x00043045     0x10a4 ./Middlewares/Third_Party/LwIP/src/core/inet_chksum.o
- .debug_line    0x000440e9     0x1048 ./Middlewares/Third_Party/LwIP/src/core/init.o
- .debug_line    0x00045131      0xe90 ./Middlewares/Third_Party/LwIP/src/core/ip.o
- .debug_line    0x00045fc1     0x12c4 ./Middlewares/Third_Party/LwIP/src/core/mem.o
- .debug_line    0x00047285     0x125a ./Middlewares/Third_Party/LwIP/src/core/memp.o
- .debug_line    0x000484df     0x15a7 ./Middlewares/Third_Party/LwIP/src/core/netif.o
- .debug_line    0x00049a86     0x1a3d ./Middlewares/Third_Party/LwIP/src/core/pbuf.o
- .debug_line    0x0004b4c3     0x21a0 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
- .debug_line    0x0004d663     0x2292 ./Middlewares/Third_Party/LwIP/src/core/tcp_in.o
- .debug_line    0x0004f8f5     0x1e63 ./Middlewares/Third_Party/LwIP/src/core/tcp_out.o
- .debug_line    0x00051758     0x129c ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
- .debug_line    0x000529f4     0x15c8 ./Middlewares/Third_Party/LwIP/src/core/udp.o
- .debug_line    0x00053fbc     0x160c ./Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.o
- .debug_line    0x000555c8     0x1090 ./Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.o
- .debug_line    0x00056658     0x128e ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.o
- .debug_line    0x000578e6     0x1160 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.o
- .debug_line    0x00058a46     0x1591 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.o
- .debug_line    0x00059fd7     0x1085 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
- .debug_line    0x0005b05c     0x10f4 ./Middlewares/Third_Party/LwIP/system/OS/sys_arch.o
+ .debug_line    0x0000bb9c      0x6c8 ./Core/Src/http/web_ui/file_system/packed_fs.o
+ .debug_line    0x0000c264       0x7a ./Core/Startup/startup_stm32h723zgtx.o
+ .debug_line    0x0000c2de      0x898 ./Drivers/BSP/Components/lan8742/lan8742.o
+ .debug_line    0x0000cb76      0xf7e ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
+ .debug_line    0x0000daf4      0xef2 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
+ .debug_line    0x0000e9e6     0x2853 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
+ .debug_line    0x00011239     0x1c57 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.o
+ .debug_line    0x00012e90      0xdb1 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
+ .debug_line    0x00013c41      0xf5f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
+ .debug_line    0x00014ba0     0x13c2 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
+ .debug_line    0x00015f62     0x1b74 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
+ .debug_line    0x00017ad6      0xc75 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rng.o
+ .debug_line    0x0001874b     0x405f ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
+ .debug_line    0x0001c7aa     0x1ff8 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
+ .debug_line    0x0001e7a2     0x3fc6 ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.o
+ .debug_line    0x00022768      0xfcb ./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o
+ .debug_line    0x00023733      0xfe7 ./LWIP/App/lwip.o
+ .debug_line    0x0002471a     0x1555 ./LWIP/Target/ethernetif.o
+ .debug_line    0x00025c6f     0xaef6 ./Middlewares/Third_Party/Cesanta_Network Library/Mongoose/mongoose.o
+ .debug_line    0x00030b65     0x248f ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
+ .debug_line    0x00032ff4      0x797 ./Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_line    0x0003378b     0x1761 ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_line    0x00034eec     0x1e66 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_line    0x00036d52      0xe1f ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_line    0x00037b71      0x960 ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_line    0x000384d1      0x9c2 ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_line    0x00038e93     0x1711 ./Middlewares/Third_Party/LwIP/src/api/api_lib.o
+ .debug_line    0x0003a5a4     0x1f81 ./Middlewares/Third_Party/LwIP/src/api/api_msg.o
+ .debug_line    0x0003c525      0xdbc ./Middlewares/Third_Party/LwIP/src/api/err.o
+ .debug_line    0x0003d2e1     0x105d ./Middlewares/Third_Party/LwIP/src/api/netbuf.o
+ .debug_line    0x0003e33e     0x2b87 ./Middlewares/Third_Party/LwIP/src/api/sockets.o
+ .debug_line    0x00040ec5     0x1233 ./Middlewares/Third_Party/LwIP/src/api/tcpip.o
+ .debug_line    0x000420f8      0xf4a ./Middlewares/Third_Party/LwIP/src/core/def.o
+ .debug_line    0x00043042     0x10a4 ./Middlewares/Third_Party/LwIP/src/core/inet_chksum.o
+ .debug_line    0x000440e6     0x1048 ./Middlewares/Third_Party/LwIP/src/core/init.o
+ .debug_line    0x0004512e      0xe90 ./Middlewares/Third_Party/LwIP/src/core/ip.o
+ .debug_line    0x00045fbe     0x12c4 ./Middlewares/Third_Party/LwIP/src/core/mem.o
+ .debug_line    0x00047282     0x125a ./Middlewares/Third_Party/LwIP/src/core/memp.o
+ .debug_line    0x000484dc     0x15a7 ./Middlewares/Third_Party/LwIP/src/core/netif.o
+ .debug_line    0x00049a83     0x1a3d ./Middlewares/Third_Party/LwIP/src/core/pbuf.o
+ .debug_line    0x0004b4c0     0x21a0 ./Middlewares/Third_Party/LwIP/src/core/tcp.o
+ .debug_line    0x0004d660     0x2292 ./Middlewares/Third_Party/LwIP/src/core/tcp_in.o
+ .debug_line    0x0004f8f2     0x1e63 ./Middlewares/Third_Party/LwIP/src/core/tcp_out.o
+ .debug_line    0x00051755     0x129c ./Middlewares/Third_Party/LwIP/src/core/timeouts.o
+ .debug_line    0x000529f1     0x15c8 ./Middlewares/Third_Party/LwIP/src/core/udp.o
+ .debug_line    0x00053fb9     0x160c ./Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.o
+ .debug_line    0x000555c5     0x1090 ./Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.o
+ .debug_line    0x00056655     0x128e ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.o
+ .debug_line    0x000578e3     0x1160 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.o
+ .debug_line    0x00058a43     0x1591 ./Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.o
+ .debug_line    0x00059fd4     0x1085 ./Middlewares/Third_Party/LwIP/src/netif/ethernet.o
+ .debug_line    0x0005b059     0x10f4 ./Middlewares/Third_Party/LwIP/system/OS/sys_arch.o
 
 .debug_str      0x00000000   0x17b2a5
  .debug_str     0x00000000   0x15029a ./Core/Src/freertos.o
